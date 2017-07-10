@@ -8,7 +8,7 @@ tags: [engineering, polyglot, localization, internationalization, grace, hopper]
 
 Last October, I had the privilege to speak at [Grace Hopper](https://ghc.anitaborg.org/), the world's largest gathering of women technologists. It was impressive to see 15,000 fellow female technologists gather together to share their experiences and technical expertise. To look into the audience, and see a room full of other female engineers was a great experience! 
 
-My talk was titled, [You May Not Be a Polyglot, but Your Code Needs to Be](https://www.youtube.com/watch?v=923ac4CSqsw).
+My talk was titled, You May Not Be a Polyglot, but Your Code Needs to Be ([previously presented at Midwest.io](https://www.youtube.com/watch?v=923ac4CSqsw)).
 One definition of the term polyglot is "composed in many languages." During my talk, I discussed common misconceptions about writing code for global audiences, and I provided tips to help position engineers for successful in these types of projects. 
 
 Having worked in engineering, translation, and localization for more than over a decade, I have seen first-hand how projects struggle through the globalization process. A properly globalized solution is generally achieved by ensuring the appropriate internationalization, localization, and translation steps have taken place; however, as developers, we have misconceptions that make this process more costly and less effective than it needs to be.
@@ -18,46 +18,55 @@ To help set the stage, I began my talk by speaking in Spanish. I love watching t
 One of the most common misconceptions when coding for a global audience is the infamous statement: "I'll NEVER need to do this." The most common rationalization for this misconception is that in the U.S., we only speak English, however, one in five U.S. residents speaks a foreign language at home. This is a record 61.8 million residents who speak languages other than English. Of these residents, 25.1 million (41 percent) told the Census Bureau that they speak English less than very well. Additionally, data from 2013 shows that there are seven languages with at least one million speakers in the US. These languages were Spanish (38.4 million), Chinese (three million), Tagalog (1.6 million), Vietnamese (1.4 million), French (1.3 million), and Korean and Arabic (1.1 million each). By only serving one audience, we are ignoring many customers and consumers of our solutions.  Even in my adopted hometown of Kansas City, 6% of the population speaks Spanish as their primary language. 
 
 Another common misconception is that internationalization and  localization are the same. Here are some definitions according to the Word Wide Web Consortium (W3):
->"Internationalization is the design and development of a product, application, or document content that **enables** easy localization for target audiences that vary in culture, region, or language." 
->"Localization refers to the adaptation of a product, application or document content to meet the language, cultural and other requirements of a specific target market (a 'locale')."
+
+>* "Internationalization is the design and development of a product, application, or document content that **enables** easy localization for target audiences that vary in culture, region, or language." 
+>* "Localization refers to the adaptation of a product, application or document content to meet the language, cultural and other requirements of a specific target market (a 'locale')."
 
 I like to think of their relationship more like this: **i18N + L10N == G11N**
+<br />
 While the W3 notes, "some people use other terms, such as globalization to refer to the same concept" as internationalization," I see the appropriate execution of internationalization and localization together as providing a globalized solution.
 
 Among examples of appropriately globalized solutions, TripAdvisor is one I like to highlight because it has a broad user base, and many of its users don't realize it is used by others around the world in their own language. The following Trip Advisor elements help provide a positive user experience:
-*Flexing dates to show in the appropriate locale
-*Removing content that is not available in the target language (newsletters are a good example)
-*Accurate currency conversion
-*Allowing for text expansion to avoid truncation
-*Flexing logos and the brand to ensure that it is appropriate for the locale
+
+* Flexing dates to show in the appropriate locale
+* Removing content that is not available in the target language (newsletters are a good example)
+* Accurate currency conversion
+* Allowing for text expansion to avoid truncation
+* Flexing logos and the brand to ensure that it is appropriate for the locale
 
 Another common misconception when creating globalized applications is that once something has been internationalized and translated, it can be shipped. The best way to highlight the folly of this perception is to look at some marketing mishaps. Below are some of my favorite ones:
->A famous detergent from the Middle East, is white as snow, so it is called by the word for snow in Farsi. This doesn't work well when it is referenced in English-speaking countries. In Farsi, the word for snow is barf.  
->I also have a personal story. I come from a tropical country, and my native language is Spanish. When I first moved to the United States, I realized that I was not genetically engineered to be in the cold, dry weather of a Kansas City winter. My skin was itchy, and I desperately need some good hydrating lotion. My friends at school recommended something called Sarna. I was convinced they were trolling me because in Spanish, Sarna means Scabies.
-I have endured more than a dozen Kansas City winters, and I still can't make myself use that lotion, because I can't get over the name.
+
+>*  A famous detergent from the Middle East, is white as snow, so it is called by the word for snow in Farsi. This doesn't work well when it is referenced in English-speaking countries. In Farsi, the word for snow is barf.  
+>* I also have a personal story. I come from a tropical country, and my native language is Spanish. When I first moved to the United States, I realized that I was not genetically engineered to be in the cold, dry weather of a Kansas City winter. My skin was itchy, and I desperately need some good hydrating lotion. My friends at school recommended something called Sarna. I was convinced they were trolling me because in Spanish, Sarna means _Scabies_. 
+>I have endured more than a dozen Kansas City winters, and I still can't make myself use that lotion, because I can't get over the name.
 
 Translation alone is not a solution. The translator must be proficient. In a previous position I was frequently asked how long it takes to learn a language. I was fighting the misconception that anyone who has taken two years of a language could translate. After failing to articulate why that was a misconception, I found a wonderful tool, thanks to the Foreign Language Institute and the Interagency Language Roundtable (ILR), who created a scale that is a set of descriptions of abilities to communicate in a language. One important aspect of this scale is that it is accurate when the evaluations are done by native speakers. It was originally developed by the United States Foreign Service Institute (FSI), and is still widely known as the FSI scale. It consists of descriptions of five levels of language proficiency.
-*Level 1: Elementary
-*Level 2: Limited Working
-*Level 3: Professional Working
-*Level 4: Full Professional
-*Level 5: Native or Bilingual
+
+* Level 1: Elementary
+* Level 2: Limited Working
+* Level 3: Professional Working
+* Level 4: Full Professional
+* Level 5: Native or Bilingual
+
 Then the scale estimates how long it takes to achieve that level of proficiency when a student is immersed learning the language at least six hours a day and at least five days per week. It then breaks down the languages by groups based on their difficulty:
 
 "Easy" languages are French, German, Indonesian, Italian, Portuguese, Romanian, Spanish, and Swahili:
-*8 weeks (240 hours) to achieve level 1/1+
-*16 weeks (480 hours) to achieve level 2
-*24 weeks (720 hours) to achieve level 2+
+
+* 8 weeks (240 hours) to achieve level 1/1+
+* 16 weeks (480 hours) to achieve level 2
+* 24 weeks (720 hours) to achieve level 2+
 
 "Hard" languages are divided into the following groups. 
-*Group 2: Bulgarian, Burmese, Greek, Hindi, Persian, Urdu. 
-*Group 3: Amharic, Cambodian, Czech, Finnish, Hebrew, Hungarian, Lao, Polish, Russian, Serbo-Croatian, Thai, Turkish, Vietnamese. 
-*Group 4: Arabic, Chinese, Japanese, Korean)
+
+* Group 2: Bulgarian, Burmese, Greek, Hindi, Persian, Urdu. 
+* Group 3: Amharic, Cambodian, Czech, Finnish, Hebrew, Hungarian, Lao, Polish, Russian, Serbo-Croatian, Thai, Turkish, Vietnamese. 
+* Group 4: Arabic, Chinese, Japanese, Korean)
 
 To learn these languages, you must spend the following time:
-*12 weeks (360 hours) to achieve level 1/1+
-*24 weeks (720 hours) to achieve level 1+ /2
-*44+ weeks (1320+ hours) to achieve level 2/2+
+
+* 12 weeks (360 hours) to achieve level 1/1+
+* 24 weeks (720 hours) to achieve level 1+ /2
+* 44+ weeks (1320+ hours) to achieve level 2/2+
 
 Taking a language for two years (usually college or high-school) is simply not enough to achieve the appropriate level of proficiency needed to translate. Even native speakers are not effective at translation. Becoming proficient in a language is very challenging, and cultural aspects are important as well. 
 
@@ -76,17 +85,21 @@ Creating appropriate partnerships with language providers is key to successfully
 If you have to use free online tools to translate something internally (where the quality doesn't need to be high), make sure you understand the licensing of the tool. Some free tools will own your content once you run it through their translation engine.
 
 Including internationalization as part of your development process is a key aspect to globalization success. This means it should be included in:
-*Design, including user interface design (UX)
-*Estimates
-*Testing
-*Deployment
+
+* Design, including user interface design (UX)
+* Estimates
+* Testing
+* Deployment
 
 Localization testing is a new step that should be included in your process, which requires language experts to be involved. From a development perspective, there are a lot of existing artifacts that can be leveraged in this process, such as regression and feature test plans. It is always helpful if those artifacts can be separated into those that have UI changes or not. 
 
 Localization testing will likely focus on language changes and impacts to the UI. A byproduct of localization testing is that other types of defects might surface. Having a good process so that bugs can be reported and tracked is key.
 
 If you are just starting down the road of internationalization, be sure you don't reinvent the wheel on how to do it. Programming languages usually have well-documented libraries that can be used. If you are already internationalizing and working with a localization team, make sure you are commenting your code to provide clarification to the translators. Below is an example of a popular localization tool:
-{% img /assets/2017-07-07-you-may-not-be-a-polyglot-but-your-code-needs-to-be/pic.png %}
+
+<div align="center">
+{% img /assets/2017-07-07-you-may-not-be-a-polyglot-but-your-code-needs-to-be/polygot.png %}
+</div>
 
 Once you have incorporated all the steps for localization into your process, it is important to understand that your text changes will now have financial impact as they will affect translations. Translation memories are commonly used by translators, and any change to the source text will trigger a new translation to be required. 
 
@@ -95,19 +108,25 @@ Translation companies typically charge per word. The average cost per word in 20
 Let's discuss some quick principles that you should be able to apply regardless of what programming language you use.
 
 Don't concatenate strings. Language order matters with translation. Instead of doing this:
+
+```javascript
 <div style="font-family: monospace">function getDescription() {
   var color = getColor();
   var element = getElement();
   return color + " " + element;
 }</div>
+```
 
 Do something like this:
+
+```javascript
 <div style="font-family: monospace">function getDescription() {
    	var color = getColor();
    	var element = getElement();
-return getLocalizedString (‘elementDescription', color, element);
+return getLocalizedString ('elementDescription', color, element);
 }
 elementDescription = {1} {0}</div>
+```
 
 Refraining from concatenating strings allows lthe localization professional to ensure that grammar is appropriately represented in the language. If you concatenate strings you will be forcing someone to say something like:
 
